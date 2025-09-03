@@ -1,93 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_animation">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#101010"
+    android:padding="24dp">
 
-    <!-- Card View for Login Box -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:layout_centerInParent="true"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp">
+        android:text="Fahim's Injector"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="40dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Username"
+        android:background="@drawable/input_field"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:hintTextColor="#AAAAAA"
+        android:layout_marginBottom="16dp"/>
 
-            <!-- Title -->
-            <TextView
-                android:id="@+id/appTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="✯☆NG OFFICIAL☆✯"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:paddingBottom="16dp"/>
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Password"
+        android:background="@drawable/input_field"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:hintTextColor="#AAAAAA"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"/>
 
-            <!-- Username -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Username">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Password -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Save Password + Show Password Switch -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="space_between"
-                android:paddingTop="8dp">
-
-                <CheckBox
-                    android:id="@+id/savePassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Save Password"/>
-
-            </LinearLayout>
-
-            <!-- Login Button -->
-            <Button
-                android:id="@+id/injectButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="LOGIN"
-                android:textAllCaps="true"
-                android:backgroundTint="#000000"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="16dp"
-                android:padding="12dp"
-                android:drawablePadding="8dp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_box"/>
+</LinearLayout>

@@ -2,50 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:background="#101010"
-    android:padding="24dp">
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F5F5F5">
 
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fahim's Injector"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="40dp"/>
-
+    <!-- Username field -->
     <EditText
-        android:id="@+id/usernameInput"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Enter Username"
+        android:layout_height="wrap_content"
+        android:hint="Username"
         android:background="@drawable/input_field"
         android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:hintTextColor="#AAAAAA"
         android:layout_marginBottom="16dp"/>
 
+    <!-- Password field -->
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Enter Password"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
         android:background="@drawable/input_field"
         android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:hintTextColor="#AAAAAA"
-        android:inputType="textPassword"
         android:layout_marginBottom="24dp"/>
 
+    <!-- Login Button -->
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:text="Login"
-        android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:background="@drawable/rounded_box"/>
+        android:background="@drawable/login_button"/>
 </LinearLayout>
